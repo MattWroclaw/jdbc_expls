@@ -50,3 +50,4 @@ public class przyklad9 {
         }
     }
 }
+// wrzucanie danych z bazy danych z tabelki na obiekt w Javie to nazywa się mapowanie

@@ -18,8 +18,8 @@ public class przyklad3 {
             String user = "sdatest";
             String password = "Start123!";
             connection = DriverManager.getConnection(url, user, password);
-            preStmt = connection.prepareStatement("SELECT * FROM ksiazka WHERE tytul like \"%\" ? \"%\";");
-            preStmt.setString(1, "Java");
+            preStmt = connection.prepareStatement("SELECT * FROM ksiazka WHERE tytul like \"%\" ? \"%\";"); //parametr to ?
+            preStmt.setString(1, "Wydanie"); //1 = pierwszy znak zapytania
             ResultSet resultSet = preStmt.executeQuery();
             while (resultSet.next()) {
                 Integer id = resultSet.getInt("id");

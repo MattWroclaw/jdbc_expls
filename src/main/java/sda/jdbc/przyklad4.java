@@ -20,8 +20,10 @@ public class przyklad4 {
             connection = DriverManager.getConnection(url, user, password);
             preStmt = connection.prepareStatement("SELECT * FROM ksiazka WHERE tytul like \"%\" ? \"%\"");
             preStmt.setString(1, "Java");
+//            preStmt.setString(1, "Jawa"); jak jest zepsute, to też działa, ale nie wyświetla wyników
             boolean isResultSet = preStmt.execute();
             if (isResultSet) {
+                System.out.println("wyniki: ");
                 ResultSet resultSet = preStmt.getResultSet();
                 while (resultSet.next()) {
                     Integer id = resultSet.getInt("id");

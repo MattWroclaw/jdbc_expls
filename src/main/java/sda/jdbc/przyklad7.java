@@ -9,11 +9,12 @@ package sda.jdbc;
 
 import java.sql.*;
 
-public class przyklad7 {
+public class przyklad7 { //tutaj jest pokazane dlaczego nie robimy z plusikami + Konkatynacja parametrów)
     private final static String sqlSelect = "SELECT * FROM ksiazka WHERE id=";
 
     public static void main(String arg[]) {
         String parametr = "3"; // jak wstawimy jako parametr "3 OR 1=1" to mamy sqlInjection
+//        String parametr = "3 OR 1=1"; przykład jak można wyciągnąć dane
         Connection connection = null;
         PreparedStatement preStmt = null;
         try {

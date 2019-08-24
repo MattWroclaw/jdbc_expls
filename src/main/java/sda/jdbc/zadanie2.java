@@ -39,10 +39,7 @@ public class zadanie2 {
     }
 
     public static void dodawanieUzytkownika() {
-        String insertUzytkownika = "INSERT INTO uzytkownik\n" +
-                "(`imie`, `nazwisko`) " +
-                "VALUES " +
-                "(?,?)";
+        String insertUzytkownika = "INSERT INTO uzytkownik (`imie`, `nazwisko`) VALUES (?,?)";
         String url = "jdbc:mysql://localhost:3306/ksiegarnia";
         String user = "sdatest";
         String password = "Start123!";

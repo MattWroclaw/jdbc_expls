@@ -26,7 +26,9 @@ public class przyklad6 {
             String password = "Start123!";
             connection = DriverManager.getConnection(url, user, password);
             preStmt = connection.prepareStatement(sqlInsert);
-            connection.setAutoCommit(false);
+            connection.setAutoCommit(false); // to służy do transakcji, czyli albo wszystko się wykona
+            // albo nic. Tutaj się to wyłącza, bo domyślnie jest ustawiony, że po każdym poleceniu
+//            jest dorzucany commit
 
             for (int i = 0; i < 5; i++) {
                 preStmt.setString(1, "Jan");

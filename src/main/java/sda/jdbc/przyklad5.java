@@ -10,9 +10,7 @@ package sda.jdbc;
 import java.sql.*;
 
 public class przyklad5 {
-    private static String sqlUpdate = "UPDATE adres " +
-            "SET `nrmieszkania` = ? " +
-            "WHERE `miejscowosc` = ?";
+    private static String sqlUpdate = "UPDATE adres SET `nrmieszkania` = ? WHERE `miejscowosc` = ?";
 
     public static void main(String arg[]) {
         Connection connection = null;
@@ -24,7 +22,7 @@ public class przyklad5 {
             connection = DriverManager.getConnection(url, user, password);
             preStmt = connection.prepareStatement(sqlUpdate);
             preStmt.setString(1, "13");
-            preStmt.setString(2, "Gdańsk");
+            preStmt.setString(2, "Gdansk");
             int countUpdateRecords = preStmt.executeUpdate();
 
             System.out.println("zaktualizowano " + countUpdateRecords + " rekordow");
